@@ -23,7 +23,7 @@ ENUM = ROOT / "data" / "spaceship_enumeration.csv"
 DETAIL = ROOT / "data" / "spaceships_detail.jsonl"
 COMPOSITE = ROOT / "data" / "composite_scores.csv"
 MANIFEST = ROOT / "data" / "manifest_mu_full.parquet"
-OUT = ROOT / "manuscript" / "figures" / "sigma_characterization.png"
+OUT = ROOT / "outputs" / "sigma_characterization.png"
 
 # Canonical coordinate block
 C8 = [comb(8, n) for n in range(9)]

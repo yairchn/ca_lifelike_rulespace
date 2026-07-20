@@ -20,13 +20,13 @@ Combined with an exhaustive enumeration of every rule's compact (3×3, T ≤ 16)
 gliders, still lifes and oscillators, the coordinates yield a hierarchical
 B / S factorisation and the compact-glider exclusion on B = S.
 
-The full argument is in [`manuscript/manuscript.pdf`](manuscript/manuscript.pdf).
+The manuscript itself lives in a separate working tree; this repository ships
+only the reproduction code and the derived data needed to rebuild every figure.
 
 ## Repository layout
 
 ```
 .
-├── manuscript/       LaTeX source, style files, figures, compiled PDF
 ├── src/              Rule-table coordinate code
 │   ├── coordinates.py             λ, δ, μ, μ_centre, μ_neigh, δ_edge, τ, σ
 │   └── build_symmetry_coords.py   Verify parities on all 262 144 rules and
@@ -37,6 +37,7 @@ The full argument is in [`manuscript/manuscript.pdf`](manuscript/manuscript.pdf)
 │   ├── fig3_delta_histograms.py      → Fig_delta_histograms.png
 │   ├── fig4_factorization.py         → factorization.png
 │   └── fig5_joint_plane.py           → joint_plane.png
+├── outputs/          Figure PNGs land here after running the scripts
 └── data/             Derived data required by the figure scripts
     ├── spaceship_enumeration.csv     Σ (compact-spaceship count) per rule
     ├── spaceships_detail.jsonl       One line per found (rule, seed, period, v)
@@ -70,7 +71,7 @@ python figures/fig4_factorization.py
 python figures/fig5_joint_plane.py
 ```
 
-Each writes its PNG into `manuscript/figures/`.
+Each writes its PNG into `outputs/`.
 
 The `symmetry_coords_full.parquet` table used by fig3 is shipped but can be
 regenerated (with a parity self-check on all 262 144 rules) via
@@ -78,17 +79,6 @@ regenerated (with a parity self-check on all 262 144 rules) via
 ```bash
 python src/build_symmetry_coords.py
 ```
-
-## Compile the manuscript
-
-With any modern LaTeX distribution (e.g. TeX Live, MacTeX, TinyTeX):
-
-```bash
-cd manuscript
-latexmk -pdf manuscript.tex
-```
-
-The pre-built PDF is included at `manuscript/manuscript.pdf`.
 
 ## Rule-table coordinates in your own code
 

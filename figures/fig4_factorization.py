@@ -6,7 +6,7 @@ Panel (a): 3-bar chart of birth-set-support cardinalities at threshold k>=4,
 Panel (b): #SL vs |S| scatter, split by B in B_prop (orange) vs. outside (grey);
   Spearman rho = +0.555 inside vs +0.135 outside.
 
-Overwrites manuscript/figures/factorization.png.
+Writes outputs/factorization.png.
 """
 from pathlib import Path
 import numpy as np
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT  = ROOT / "manuscript" / "figures" / "factorization.png"
+OUT  = ROOT / "outputs" / "factorization.png"
 
 
 def popc(m): return bin(int(m)).count("1")

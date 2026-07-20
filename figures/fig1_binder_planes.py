@@ -17,7 +17,7 @@ from matplotlib.lines import Line2D
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-FIG = ROOT / "manuscript" / "figures" / "binder_lambda_mu.png"
+FIG = ROOT / "outputs" / "binder_lambda_mu.png"
 ENUM = ROOT / "data" / "spaceship_enumeration.csv"
 MANIFEST = ROOT / "data" / "manifest_mu_full.parquet"
 

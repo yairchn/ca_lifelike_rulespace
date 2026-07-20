@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 COORDS = ROOT / "data" / "symmetry_coords_full.parquet"
-OUT = ROOT / "manuscript" / "figures" / "Fig_delta_histograms.png"
+OUT = ROOT / "outputs" / "Fig_delta_histograms.png"
 
 
 def discrete_hist(values, support, weights=None):

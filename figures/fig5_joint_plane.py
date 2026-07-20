@@ -13,7 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "manuscript" / "figures" / "joint_plane.png"
+OUT = ROOT / "outputs" / "joint_plane.png"
 
 SILENT_THRESHOLD = 1e-3   # G_star_alt < this means "silent"
 
