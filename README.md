@@ -39,11 +39,16 @@ only the reproduction code and the derived data needed to rebuild every figure.
 │   └── fig5_joint_plane.py           → joint_plane.png
 ├── outputs/          Figure PNGs land here after running the scripts
 └── data/             Derived data required by the figure scripts
-    ├── spaceship_enumeration.csv     Σ (compact-spaceship count) per rule
+    ├── spaceship_enumeration.csv     φ (3×3 compact-spaceship count) per rule
+    ├── spaceship_enumeration_4x4_full.csv  4×4 spaceship enumeration
+    │                                  (used for the k≥1 propagation-gate
+    │                                  containment 26 ⊂ 64 in §3.4)
     ├── spaceships_detail.jsonl       One line per found (rule, seed, period, v)
-    ├── still_life_enumeration.parquet  #SL per rule
-    ├── oscillator_enumeration.csv    Ω per rule
+    ├── still_life_enumeration.parquet  ψ per rule
+    ├── oscillator_enumeration.csv    ω per rule
     ├── composite_scores.csv          per-rule combined table (names, G*_alt, …)
+    ├── silent38_summary.csv          33 robustly-silent + 5 rare-basin split
+    │                                  used by fig5 (§3.3 stress test)
     ├── manifest_mu_full.parquet      Pre-computed μ table (used for cross-check)
     └── symmetry_coords_full.parquet  λ, δ, μ, μ_c, μ_n, δ_edge per rule
 ```
