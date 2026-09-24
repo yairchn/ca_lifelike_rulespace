@@ -107,6 +107,12 @@ B, S = all_rules()
 lam, delta, mu, mu_centre, mu_neigh, delta_edge = coords(B, S)
 ```
 
+> **Note.** The paper's analysis uses only `lam`, `delta`, `mu`, and
+> `mu_centre`. The auxiliary coordinates `mu_neigh` (neighbour-bit
+> sensitivity) and `delta_edge` (edge-imbalance, τ-odd/σ-odd) are computed
+> by `coordinates.py` for provenance and reproducibility, but are not
+> carried through the manuscript's arguments.
+
 ## Data provenance
 
 The `data/spaceship_enumeration.csv`, `still_life_enumeration.parquet`, and
